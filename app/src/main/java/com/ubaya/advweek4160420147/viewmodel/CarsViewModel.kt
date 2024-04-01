@@ -11,47 +11,49 @@ import com.android.volley.toolbox.StringRequest
 import com.android.volley.toolbox.Volley
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
-import com.ubaya.advweek4160420147.model.Student
+import com.ubaya.advweek4160420147.model.Cars
 
-class ListViewModel(application: Application): AndroidViewModel(application)  {
-    val studentsLD = MutableLiveData<ArrayList<Student>>()
-    val studentLoadErrorLD = MutableLiveData<Boolean>()
+class CarsViewModel(application: Application) : AndroidViewModel(application) {
+    val carsLD = MutableLiveData<List<Cars>>()
+    val carsLoadErrorLD = MutableLiveData<Boolean>()
     val loadingLD = MutableLiveData<Boolean>()
-    val TAG = "volleyTag"
+
+    private val TAG = "volleyTag"
     private var queue: RequestQueue? = null
+
     fun refresh() {
-
-        studentLoadErrorLD.value = false
+        carsLoadErrorLD.value = false
         loadingLD.value = true
-
-        queue = Volley.newRequestQueue( getApplication()  )
-        val url = "http://adv.jitusolution.com/student.php?"
-
+        Log.d("CekMasuk", "masukvolley")
+        queue = Volley.newRequestQueue(getApplication())
+        val url = "http://10.0.2.2/cars/cars.json"
         val stringRequest = StringRequest(
             Request.Method.GET, url,
             { response ->
                 try {
                     val gson = Gson()
-                    val studentType = object : TypeToken<List<Student>>() {}.type
-                    val students = gson.fromJson<List<Student>>(response, studentType)
-                    studentsLD.value = ArrayList(students)
+                    val cars = gson.fromJson(response, Array<Cars>::class.java).toList()
+                    carsLD.value = cars
+                    carsLoadErrorLD.value = false
                     loadingLD.value = false
+                    Log.d("showVolley", cars.toString())
                 } catch (e: Exception) {
                     Log.e(TAG, "Error parsing JSON: ", e)
-                    studentLoadErrorLD.value = true
+                    carsLoadErrorLD.value = true
                     loadingLD.value = false
                 }
-            }
-            ,
+            },
             { error ->
-                Log.e(TAG, "Vollery error: $error")
-                studentLoadErrorLD.value = true
+                Log.e(TAG, "Volley error: $error")
+                carsLoadErrorLD.value = true
                 loadingLD.value = false
-            })
-
+            }
+        )
         stringRequest.tag = TAG
         queue?.add(stringRequest)
     }
+
+
     override fun onCleared() {
         super.onCleared()
         queue?.cancelAll(TAG)

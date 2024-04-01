@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/navigation"
-    app:startDestination="@id/studentListFragment">
+    app:startDestination="@id/carsListFragment">
     <fragment
         android:id="@+id/studentListFragment"
         android:name="com.ubaya.advweek4160420147.view.StudentListFragment"
@@ -23,4 +23,9 @@
         android:name="com.ubaya.advweek4160420147.view.MainActivity"
         android:label="activity_main"
         tools:layout="@layout/activity_main" />
+    <fragment
+        android:id="@+id/carsListFragment"
+        android:name="com.ubaya.advweek4160420147.view.CarsListFragment"
+        android:label="fragment_cars_list"
+        tools:layout="@layout/fragment_cars_list" />
 </navigation>
