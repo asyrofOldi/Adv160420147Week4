@@ -26,7 +26,7 @@ class CarsViewModel(application: Application) : AndroidViewModel(application) {
         loadingLD.value = true
         Log.d("CekMasuk", "masukvolley")
         queue = Volley.newRequestQueue(getApplication())
-        val url = "http://10.0.2.2/cars/cars.json"
+        val url = "http://172.20.10.7/cars/cars.json"
         val stringRequest = StringRequest(
             Request.Method.GET, url,
             { response ->
