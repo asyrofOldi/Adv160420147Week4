@@ -1,0 +1,152 @@
+[
+    {
+      "id": 1,
+      "make": "Toyota",
+      "model": "Camry",
+      "year": 2022,
+      "color": "Silver",
+      "price": 25000,
+      "features": ["Bluetooth", "Backup Camera", "Keyless Entry"],
+      "imageUrl": "https://imgcdn.oto.com/large/gallery/exterior/38/334/toyota-camry-front-angle-low-view-461058.jpg",
+      "specs": {
+        "engine": "2.5L 4-cylinder",
+        "transmission": "Automatic",
+        "fuel_type": "Gasoline"
+      }
+    },
+    {
+      "id": 2,
+      "make": "Honda",
+      "model": "Civic",
+      "year": 2021,
+      "color": "White",
+      "price": 22000,
+      "features": ["Apple CarPlay", "Android Auto", "Lane Departure Warning"],
+      "imageUrl": "https://img.cintamobil.com/2021/10/21/cWC5a43e/civic-type-r-4ef8.png",
+      "specs": {
+        "engine": "1.5L 4-cylinder",
+        "transmission": "CVT",
+        "fuel_type": "Gasoline"
+      }
+    },
+    {
+      "id": 3,
+      "make": "Ford",
+      "model": "Mustang",
+      "year": 2023,
+      "color": "Yellow",
+      "price": 40000,
+      "features": ["Leather Seats", "Performance Package", "Navigation System"],
+      "imageUrl": "https://ims2storage.blob.core.windows.net/cms-image/news/WhatsApp-Image-2022-07-13-at-16.55.37.jpeg",
+      "specs": {
+        "engine": "5.0L V8",
+        "transmission": "Manual",
+        "fuel_type": "Gasoline"
+      }
+    },
+    {
+      "id": 4,
+      "make": "Chevrolet",
+      "model": "Equinox",
+      "year": 2020,
+      "color": "Silver",
+      "price": 28000,
+      "features": ["Remote Start", "Sunroof", "Blind Spot Monitoring"],
+      "imageUrl": "https://imgx.gridoto.com/crop/0x0:0x0/750x500/photo/2022/09/12/equinox-1jpg-20220912121157.jpg",
+      "specs": {
+        "engine": "1.5L 4-cylinder",
+        "transmission": "Automatic",
+        "fuel_type": "Gasoline"
+      }
+    },
+    {
+      "id": 5,
+      "make": "Nissan",
+      "model": "Altima",
+      "year": 2022,
+      "color": "White",
+      "price": 23000,
+      "features": ["ProPILOT Assist", "Push Button Start", "Dual-Zone Climate Control"],
+      "imageUrl": "https://img.inews.co.id/media/1200/files/inews/7-OTOMOTIF/nissan/nissan_altima.jpg",
+      "specs": {
+        "engine": "2.5L 4-cylinder",
+        "transmission": "CVT",
+        "fuel_type": "Gasoline"
+      }
+    },
+    {
+      "id": 6,
+      "make": "BMW",
+      "model": "X5",
+      "year": 2023,
+      "color": "Gray",
+      "price": 60000,
+      "features": ["Panoramic Moonroof", "Harman Kardon Sound System", "Heated Seats"],
+      "imageUrl": "https://imgcdn.oto.com/large/gallery/color/3/39/bmw-x5-color-562332.jpg",
+      "specs": {
+        "engine": "3.0L Inline-6",
+        "transmission": "Automatic",
+        "fuel_type": "Diesel"
+      }
+    },
+    {
+      "id": 7,
+      "make": "Hyundai",
+      "model": "Elantra",
+      "year": 2021,
+      "color": "Silver",
+      "price": 21000,
+      "features": ["Forward Collision Avoidance Assist", "Smart Cruise Control", "Wireless Charging"],
+      "imageUrl": "https://cache2.pakwheels.com/system/car_generation_pictures/5381/original/elantra.jpg?1608016094",
+      "specs": {
+        "engine": "2.0L 4-cylinder",
+        "transmission": "CVT",
+        "fuel_type": "Gasoline"
+      }
+    },
+    {
+      "id": 8,
+      "make": "Audi",
+      "model": "A4",
+      "year": 2022,
+      "color": "Blue",
+      "price": 45000,
+      "features": ["Virtual Cockpit", "Quattro All-Wheel Drive", "Matrix LED Headlights"],
+      "imageUrl": "https://imgcdn.oto.com/large/gallery/color/1/2/audi-a4-color-354704.jpg",
+      "specs": {
+        "engine": "2.0L 4-cylinder",
+        "transmission": "Automatic",
+        "fuel_type": "Gasoline"
+      }
+    },
+    {
+      "id": 9,
+      "make": "Mercedes-Benz",
+      "model": "E-Class",
+      "year": 2023,
+      "color": "Black",
+      "price": 65000,
+      "features": ["MBUX Infotainment System", "Adaptive Cruise Control", "Heated Steering Wheel"],
+      "imageUrl": "https://imgcdn.oto.com/large/gallery/color/25/1510/mercedes-benz-e-class-color-508232.jpg",
+      "specs": {
+        "engine": "3.0L Inline-6",
+        "transmission": "Automatic",
+        "fuel_type": "Gasoline"
+      }
+    },
+    {
+      "id": 10,
+      "make": "Jeep",
+      "model": "Cherokee",
+      "year": 2022,
+      "color": "Green",
+      "price": 32000,
+      "features": ["4x4 Capability", "Uconnect 4C Infotainment System", "Trail Rated"],
+      "imageUrl": "https://imgcdn.oto.com/large/gallery/color/19/162/jeep-grand-cherokee-color-158193.jpg",
+      "specs": {
+        "engine": "3.2L V6",
+        "transmission": "Automatic",
+        "fuel_type": "Gasoline"
+      }
+    }
+  ]
