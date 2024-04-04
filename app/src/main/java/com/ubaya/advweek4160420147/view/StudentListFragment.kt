@@ -1,5 +1,6 @@
 package com.ubaya.advweek4160420147.view
 
+import android.database.Observable
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -11,6 +12,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.ubaya.advweek4160420147.R
 import com.ubaya.advweek4160420147.databinding.FragmentStudentListBinding
 import com.ubaya.advweek4160420147.viewmodel.ListViewModel
+import java.util.concurrent.TimeUnit
 
 class StudentListFragment : Fragment() {
     private lateinit var viewModel: ListViewModel
@@ -49,6 +51,7 @@ class StudentListFragment : Fragment() {
         viewModel.studentsLD.observe(viewLifecycleOwner, Observer {
             studentListAdapter.updateStudentList(it)
         })
+
         viewModel.studentLoadErrorLD.observe(viewLifecycleOwner, Observer {
             if (it == true) {
                 binding.txtError?.visibility = View.VISIBLE

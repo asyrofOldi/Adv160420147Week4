@@ -11,13 +11,17 @@
         tools:layout="@layout/fragment_student_list" >
         <action
             android:id="@+id/actionStudentDetail"
-            app:destination="@id/studentDetailFragment2" />
+            app:destination="@id/studentDetailFragment" />
     </fragment>
     <fragment
-        android:id="@+id/studentDetailFragment2"
+        android:id="@+id/studentDetailFragment"
         android:name="com.ubaya.advweek4160420147.view.StudentDetailFragment"
         android:label="fragment_student_detail"
-        tools:layout="@layout/fragment_student_detail" />
+        tools:layout="@layout/fragment_student_detail" >
+        <argument
+            android:name="studentId"
+            app:argType="string" />
+    </fragment>
     <activity
         android:id="@+id/mainActivity"
         android:name="com.ubaya.advweek4160420147.view.MainActivity"

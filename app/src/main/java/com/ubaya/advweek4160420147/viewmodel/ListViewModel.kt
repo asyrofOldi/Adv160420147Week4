@@ -33,9 +33,9 @@ class ListViewModel(application: Application): AndroidViewModel(application)  {
             { response ->
                 try {
                     val gson = Gson()
-                    val studentType = object : TypeToken<List<Student>>() {}.type // Use this if expecting a list
-                    val students = gson.fromJson<List<Student>>(response, studentType) // Adjust according to expected response
-                    studentsLD.value = ArrayList(students) // Make sure this matches the expected data type
+                    val studentType = object : TypeToken<List<Student>>() {}.type
+                    val students = gson.fromJson<List<Student>>(response, studentType)
+                    studentsLD.value = ArrayList(students)
                     loadingLD.value = false
                 } catch (e: Exception) {
                     Log.e(TAG, "Error parsing JSON: ", e)
