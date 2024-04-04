@@ -1,6 +1,5 @@
 package com.ubaya.advweek4160420147.view
 
-import android.database.Observable
 import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.Fragment
@@ -30,7 +29,6 @@ class StudentDetailFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
         binding = FragmentStudentDetailBinding.inflate(inflater, container, false)
         return binding.root
     }
@@ -43,7 +41,6 @@ class StudentDetailFragment : Fragment() {
         val args: StudentDetailFragmentArgs by navArgs()
         val studentId = args.studentId
 
-        // Now you have the studentId, you can fetch the details
         viewModel.fetch(studentId)
 
         viewModel.studentLD.observe(viewLifecycleOwner, Observer { student ->
@@ -62,7 +59,6 @@ class StudentDetailFragment : Fragment() {
                     .observeOn(AndroidSchedulers.mainThread())
                     .subscribe {
                         Log.d("Messages", "five seconds")
-                        // Replace MainActivity.showNotification with your actual notification showing method
                         student.name?.let { MainActivity.showNotification(it, "A new notification created", R.drawable.baseline_person_add_24) }
                     }
             }

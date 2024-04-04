@@ -21,7 +21,6 @@ import com.ubaya.advweek4160420147.util.createNotificationChannel
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
-//    private lateinit var navController: NavController
     init {
         instance = this
     }
@@ -87,7 +86,6 @@ class MainActivity : AppCompatActivity() {
 
        val navHostFragment = supportFragmentManager.findFragmentById(R.id.hostFragment) as NavHostFragment
 
-    // Kemudian, dapatkan NavController dari NavHostFragment
         val navController = navHostFragment.navController
 
         createNotificationChannel(this,
